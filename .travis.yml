@@ -10,7 +10,7 @@ jdk:
   - oraclejdk8
 
 before_install:
-  - mysql -uroot -p -e "CREATE DATABASE exm;"
-  - mysql -uroot -p -e "CREATE USER emt@localhost IDENTIFIED BY 'eark';"
-  - mysql -uroot -p -e "GRANT ALL PRIVILEGES ON exm.* TO 'emt'@'localhost';"
-  - mysql -uroot -p < ./db/setup_db.sql
+  - mysql -uroot -e "CREATE DATABASE exm;"
+  - mysql -uroot -e "CREATE USER emt@localhost IDENTIFIED BY 'eark';"
+  - mysql -uroot -e "GRANT ALL PRIVILEGES ON exm.* TO 'emt'@'localhost';"
+  - mysql -uroot < ./db/setup_db.sql
