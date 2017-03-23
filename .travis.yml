@@ -1,0 +1,16 @@
+language: java
+sudo: required
+dist: trusty
+
+services:
+  - mysql
+
+jdk:
+  - openjdk8
+  - oraclejdk8
+
+before_install:
+  - mysql -uroot -p -e "CREATE DATABASE exm;"
+  - mysql -uroot -p -e "CREATE USER emt@localhost IDENTIFIED BY 'eark';"
+  - mysql -uroot -p -e "GRANT ALL PRIVILEGES ON exm.* TO 'emt'@'localhost';"
+  - mysql -uroot -p < ./db/setup_db.sql

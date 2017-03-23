@@ -18,6 +18,7 @@
 --
 -- Table structure for table `Mappings`
 --
+USE exm;
 
 DROP TABLE IF EXISTS `Mappings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
