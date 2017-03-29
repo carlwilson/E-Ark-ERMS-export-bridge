@@ -14,3 +14,6 @@ before_install:
   - mysql -uroot -e "CREATE USER emt@localhost IDENTIFIED BY 'eark';"
   - mysql -uroot -e "GRANT ALL PRIVILEGES ON exm.* TO 'emt'@'localhost';"
   - mysql -uroot < ./db/setup_db.sql
+
+script:
+  - mvn clean package
