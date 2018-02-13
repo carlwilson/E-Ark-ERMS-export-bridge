@@ -68,7 +68,7 @@
 						<goals>
 							<goal>run</goal>
 						</goals>
-						<phase>pre-integration-test</phase>
+						<phase>deploy</phase>
 						<configuration>
 							<port>${maven.tomcat.port}</port>
 							<useSeparateTomcatClassLoader>true</useSeparateTomcatClassLoader>
@@ -102,7 +102,7 @@
 			<plugin>
 
 				<!-- Specify the maven code generator plugin -->
-				<!-- Use org.jooq for the Open Source edition org.jooq.pro for commercial 
+				<!-- Use org.jooq for the Open Source edition org.jooq.pro for commercial
 					editions -->
 				<groupId>org.jooq</groupId>
 				<artifactId>jooq-codegen-maven</artifactId>
@@ -117,7 +117,7 @@
 					</execution>
 				</executions>
 
-				<!-- Manage the plugin's dependency. In this example, we'll use a PostgreSQL 
+				<!-- Manage the plugin's dependency. In this example, we'll use a PostgreSQL
 					database -->
 				<dependencies>
 					<dependency>
@@ -127,7 +127,7 @@
 					</dependency>
 				</dependencies>
 
-				<!-- Specify the plugin configuration. The configuration format is the 
+				<!-- Specify the plugin configuration. The configuration format is the
 					same as for the standalone code generator -->
 				<configuration>
 
